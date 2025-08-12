@@ -27,12 +27,12 @@ const adminSchema=new Schema({
     access:{
         type:Boolean,
         default:0
-
     },
-    contact:{
-        type:String,
+    phone:{
+        type:Number,
         trim:true,
         maxlength:[11,"Length of Contact number should nor be more that 11"]
+
     },
     address:{
         type:String,
@@ -46,7 +46,7 @@ const adminSchema=new Schema({
     studentCode:{
         type:String,
         required:true,
-        match: /^[A-Za-z0-9]{4}$/ 
+        match: /^[A-Za-z0-9]{6}$/ 
     }
 })
 
